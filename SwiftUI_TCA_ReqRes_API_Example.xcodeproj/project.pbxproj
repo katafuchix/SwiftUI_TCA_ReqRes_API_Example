@@ -10,14 +10,30 @@
 		3177FCBF2FA1D79F00BD288B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 3177FCBE2FA1D79F00BD288B /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3177FD442FA2652900BD288B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3177FC792FA1CF6500BD288B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3177FC802FA1CF6500BD288B;
+			remoteInfo = SwiftUI_TCA_ReqRes_API_Example;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3177FC812FA1CF6500BD288B /* SwiftUI_TCA_ReqRes_API_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_TCA_ReqRes_API_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3177FD402FA2652900BD288B /* SwiftUI_TCA_ReqRes_API_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_TCA_ReqRes_API_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3177FC832FA1CF6500BD288B /* SwiftUI_TCA_ReqRes_API_Example */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SwiftUI_TCA_ReqRes_API_Example;
+			sourceTree = "<group>";
+		};
+		3177FD412FA2652900BD288B /* SwiftUI_TCA_ReqRes_API_ExampleTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SwiftUI_TCA_ReqRes_API_ExampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -31,6 +47,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3177FD3D2FA2652900BD288B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -38,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				3177FC832FA1CF6500BD288B /* SwiftUI_TCA_ReqRes_API_Example */,
+				3177FD412FA2652900BD288B /* SwiftUI_TCA_ReqRes_API_ExampleTests */,
 				3177FC822FA1CF6500BD288B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				3177FC812FA1CF6500BD288B /* SwiftUI_TCA_ReqRes_API_Example.app */,
+				3177FD402FA2652900BD288B /* SwiftUI_TCA_ReqRes_API_ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +101,29 @@
 			productReference = 3177FC812FA1CF6500BD288B /* SwiftUI_TCA_ReqRes_API_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3177FD3F2FA2652900BD288B /* SwiftUI_TCA_ReqRes_API_ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3177FD462FA2652900BD288B /* Build configuration list for PBXNativeTarget "SwiftUI_TCA_ReqRes_API_ExampleTests" */;
+			buildPhases = (
+				3177FD3C2FA2652900BD288B /* Sources */,
+				3177FD3D2FA2652900BD288B /* Frameworks */,
+				3177FD3E2FA2652900BD288B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3177FD452FA2652900BD288B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3177FD412FA2652900BD288B /* SwiftUI_TCA_ReqRes_API_ExampleTests */,
+			);
+			name = SwiftUI_TCA_ReqRes_API_ExampleTests;
+			packageProductDependencies = (
+			);
+			productName = SwiftUI_TCA_ReqRes_API_ExampleTests;
+			productReference = 3177FD402FA2652900BD288B /* SwiftUI_TCA_ReqRes_API_ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -88,6 +136,10 @@
 				TargetAttributes = {
 					3177FC802FA1CF6500BD288B = {
 						CreatedOnToolsVersion = 26.4.1;
+					};
+					3177FD3F2FA2652900BD288B = {
+						CreatedOnToolsVersion = 26.4.1;
+						TestTargetID = 3177FC802FA1CF6500BD288B;
 					};
 				};
 			};
@@ -109,12 +161,20 @@
 			projectRoot = "";
 			targets = (
 				3177FC802FA1CF6500BD288B /* SwiftUI_TCA_ReqRes_API_Example */,
+				3177FD3F2FA2652900BD288B /* SwiftUI_TCA_ReqRes_API_ExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3177FC7F2FA1CF6500BD288B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3177FD3E2FA2652900BD288B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,7 +191,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3177FD3C2FA2652900BD288B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3177FD452FA2652900BD288B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3177FC802FA1CF6500BD288B /* SwiftUI_TCA_ReqRes_API_Example */;
+			targetProxy = 3177FD442FA2652900BD288B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3177FC8A2FA1CF6700BD288B /* Debug */ = {
@@ -265,9 +340,9 @@
 				DEVELOPMENT_TEAM = U5LW6HVD99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-TCA-ReqRes-API-Example-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -298,9 +373,9 @@
 				DEVELOPMENT_TEAM = U5LW6HVD99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-TCA-ReqRes-API-Example-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -321,6 +396,50 @@
 			};
 			name = Release;
 		};
+		3177FD472FA2652900BD288B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5LW6HVD99;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.SwiftUI-TCA-ReqRes-API-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUI_TCA_ReqRes_API_Example.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUI_TCA_ReqRes_API_Example";
+			};
+			name = Debug;
+		};
+		3177FD482FA2652900BD288B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5LW6HVD99;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.SwiftUI-TCA-ReqRes-API-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUI_TCA_ReqRes_API_Example.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUI_TCA_ReqRes_API_Example";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -338,6 +457,15 @@
 			buildConfigurations = (
 				3177FC8D2FA1CF6700BD288B /* Debug */,
 				3177FC8E2FA1CF6700BD288B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3177FD462FA2652900BD288B /* Build configuration list for PBXNativeTarget "SwiftUI_TCA_ReqRes_API_ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3177FD472FA2652900BD288B /* Debug */,
+				3177FD482FA2652900BD288B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

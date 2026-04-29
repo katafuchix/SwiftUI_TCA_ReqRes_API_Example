@@ -34,11 +34,11 @@ struct UserFeature {
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
-                // 画面表示時にUser取得を開始
+                // 画面表示時にUsers取得を開始
                 case .onAppear:
                     return .send(.fetchUsers )
      
-                // 記事取得開始 → ローディング表示
+                // Users取得開始 → ローディング表示
                 case .fetchUsers:
                     state.isLoading = true
                     state.errorMessage = nil
@@ -54,12 +54,11 @@ struct UserFeature {
                     }
                 // 記事取得成功 → User一覧をStateにセット
                 case .fetchResponse(.success(let users)):
-                print(users)
                     state.users   = users
                     state.isLoading  = false
                     return .none
      
-                // 記事取得失敗 → エラーメッセージをセット
+                // 取得失敗 → エラーメッセージをセット
                 case .fetchResponse(.failure(let error)):
                     state.isLoading     = false
                     state.errorMessage  = error.localizedDescription
