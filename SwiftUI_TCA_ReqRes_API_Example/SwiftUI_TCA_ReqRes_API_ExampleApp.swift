@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct SwiftUI_TCA_ReqRes_API_ExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(
+                store: Store(initialState: UserFeature.State()) {
+                    UserFeature()
+                }
+            )
         }
     }
 }

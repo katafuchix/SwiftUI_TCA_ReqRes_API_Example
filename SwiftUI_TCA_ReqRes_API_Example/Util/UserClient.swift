@@ -12,6 +12,7 @@ import ComposableArchitecture
 // TCAのDependencyとして定義することでテスト時にモックに差し替えられる
 struct UserClient {
     var getUser: (_ id: Int) async throws -> UserData
+    var getUsers: () async throws -> [UserData]
 }
  
 // MARK: - DependencyKey
@@ -45,6 +46,34 @@ extension UserClient: DependencyKey {
             await URLSession.shared.reset()
  
             return singleUser.data
+        },
+        getUsers: { 
+            let request = UserAPI.getUsers.asURLRequest()
+            let (data, response) = try await URLSession.shared.data(for: request)
+ 
+            // ステータスコードでエラーハンドリング
+            if let httpResponse = response as? HTTPURLResponse {
+                switch httpResponse.statusCode {
+                case 200:
+                    break
+                case 404:
+                    throw UserError.invalidUser
+                case 500..<599:
+                    throw UserError.serverError
+                default:
+                    throw UserError.internalError
+                }
+            }
+ 
+            // JSONデコード
+            guard let users = try? JSONDecoder().decode(Users.self, from: data) else {
+                throw UserError.internalError
+            }
+ 
+            // キャッシュとクッキーをクリア
+            await URLSession.shared.reset()
+ 
+            return users.data
         }
     )
  
@@ -58,6 +87,24 @@ extension UserClient: DependencyKey {
                 lastName: "User",
                 avatar: "https://example.com/avatar.jpg"
             )
+        },
+        getUsers: {
+            [
+                UserData(
+                    id: 1,
+                    email: "test@example.com",
+                    firstName: "Test",
+                    lastName: "User",
+                    avatar: "https://example.com/avatar.jpg"
+                ),
+                UserData(
+                    id: 2,
+                    email: "test@example.com",
+                    firstName: "Test",
+                    lastName: "User",
+                    avatar: "https://example.com/avatar.jpg"
+                )
+            ]
         }
     )
 }

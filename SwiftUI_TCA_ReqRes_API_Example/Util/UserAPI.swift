@@ -11,6 +11,7 @@ import Foundation
 // APIエンドポイントをenumで定義するRouterパターン
 enum UserAPI {
     case getUser(id: Int)
+    case getUsers
 }
  
 extension UserAPI {
@@ -22,6 +23,7 @@ extension UserAPI {
     private var path: String {
         switch self {
         case .getUser(let id): return "users/\(id)"
+        case .getUsers: return "users"
         }
     }
  

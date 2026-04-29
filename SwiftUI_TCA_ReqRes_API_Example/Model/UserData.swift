@@ -11,6 +11,10 @@ struct SingleUser: Decodable {
     var data: UserData
 }
 
+struct Users: Decodable {
+    var data: [UserData]
+}
+
 struct UserData: Decodable, Equatable {
     var id: Int
     var email: String
